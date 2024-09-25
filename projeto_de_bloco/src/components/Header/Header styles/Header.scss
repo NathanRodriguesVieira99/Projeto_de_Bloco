@@ -1,0 +1,36 @@
+@use "../../../styles/variables/variables.scss" as variables;
+@use "../../../styles/mixins/mixins.scss" as mixins;
+
+.Odin {
+  width: 21.6rem;
+  height: 47px;
+  flex-shrink: 0;
+  margin: auto;
+}
+
+.paiDaLista {
+  position: absolute;
+  margin-top: 1rem;
+  margin-right: -5%;
+  gap: 3rem;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  @include mixins.flex_center;
+}
+
+.paiDaLista ul {
+  gap: 1.2rem;
+  margin-right: 0.7rem;
+  @include mixins.flex_center;
+}
+
+.paiDaLista li {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.LogoImg {
+  width: 54px;
+  height: 59px;
+  flex-shrink: 0;
+}

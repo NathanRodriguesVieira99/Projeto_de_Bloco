@@ -1,0 +1,14 @@
+@use "../variables/variables.scss";
+
+@mixin reset_css {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+@mixin flex_center {
+  display: flex;
+  align-items: center;
+}

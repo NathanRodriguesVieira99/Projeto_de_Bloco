@@ -1,0 +1,28 @@
+@use "../../../styles/variables/variables.scss" as variables;
+@use "../../../styles/mixins/mixins.scss" as mixins;
+
+.odinPopularMovies {
+  margin-top: 4.5rem;
+}
+
+.popularesNoMomento {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 15px;
+  margin-bottom: 1rem;
+  margin-left: 0.5rem;
+}
+
+.listaPopularMovies {
+  gap: 0.5rem;
+  @include mixins.flex_center;
+  justify-content: flex-end;
+  flex-flow: row nowrap;
+}
+
+.popularMoviesImages {
+  border-radius: 2px;
+  width: 103px;
+  height: 161px;
+
+}
