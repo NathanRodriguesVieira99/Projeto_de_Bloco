@@ -7,8 +7,9 @@
   @include mixins.reset_css;
   font-family: variables.$font-stack;
   color: variables.$text-color;
+  scroll-behavior: smooth;
 }
 
-body{
+body {
   background-color: variables.$background-color;
 }

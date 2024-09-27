@@ -3,6 +3,14 @@
 
 .odinPopularMovies {
   margin-top: 4.5rem;
+
+  @include mixins.respond-to("medium") {
+    margin-top: 6.5rem;
+  }
+
+  @include mixins.respond-to("large") {
+    margin-top: 6.5rem;
+  }
 }
 
 .popularesNoMomento {
@@ -11,6 +19,16 @@
   line-height: 15px;
   margin-bottom: 1rem;
   margin-left: 0.5rem;
+
+  @include mixins.respond-to("medium") {
+    font-size: 24px;
+    margin-left: 0.9rem;
+  }
+
+  @include mixins.respond-to("large") {
+    font-size: 29px;
+    margin-left: 1rem;
+  }
 }
 
 .listaPopularMovies {
@@ -24,5 +42,4 @@
   border-radius: 2px;
   width: 103px;
   height: 161px;
-
 }

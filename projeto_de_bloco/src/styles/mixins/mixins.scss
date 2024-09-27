@@ -1,4 +1,4 @@
-@use "../variables/variables.scss";
+@use "../variables/variables.scss" as *;
 
 @mixin reset_css {
   padding: 0;
@@ -11,4 +11,17 @@
 @mixin flex_center {
   display: flex;
   align-items: center;
+}
+
+// Mixins para responsividade
+@mixin respond-to($size) {
+  $breakpoint: map-get($breakpoints, $size);
+
+  @if $breakpoint {
+    @media (min-width: $breakpoint) {
+      @content;
+    }
+  } @else {
+    @warn "No breakpoint defined for `#{$size}`.";
+  }
 }
