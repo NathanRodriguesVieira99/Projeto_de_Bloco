@@ -13,7 +13,7 @@ function Header() {
         <img className='LogoImgDesktop' src={logoDesktop} alt="Logo MovieFlix" />
         <ul>
           <li>
-            Livros
+            Séries
           </li>
           <li>
             Filmes
