@@ -33,13 +33,37 @@
 
 .listaPopularMovies {
   gap: 0.5rem;
+
   @include mixins.flex_center;
   justify-content: flex-end;
   flex-flow: row nowrap;
+  @include mixins.respond-to("medium") {
+    gap: 0.8rem;
+  }
+
+  @include mixins.respond-to("large") {
+    gap: 1rem;
+  }
 }
 
 .popularMoviesImages {
   border-radius: 2px;
   width: 103px;
   height: 161px;
+
+  @include mixins.respond-to("medium") {
+    width: 115px;
+    height: 175px;
+  }
+
+  @include mixins.respond-to("large") {
+    width: 150px;
+    height: 200px;
+    transition: ease 0.2s;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
 }

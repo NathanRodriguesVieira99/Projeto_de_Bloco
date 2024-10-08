@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 
 import fetchPopularMovies, { IMAGE_BASE_URL } from '../../API/apiServices'
 
-import './PopularMovies styles/PopularMovies.scss';
+import './PopularMovies styles/_PopularMovies.scss';
 
 function PopularMovies() {
   const [movies, setMovies] = useState([])

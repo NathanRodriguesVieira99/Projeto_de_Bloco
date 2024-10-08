@@ -2,7 +2,7 @@ import React from 'react'
 
 import logoMobile from '../../assets/logo/MovieFlix_Mobile.png'
 import logoDesktop from '../../assets/logo/MovieFlix.png'
-import './Header styles/Header.scss'
+import './Header styles/_Header.scss'
 
 
 function Header() {
