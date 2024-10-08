@@ -3,67 +3,74 @@
 
 .odinPopularMovies {
   margin-top: 4.5rem;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 
-  @include mixins.respond-to("medium") {
-    margin-top: 6.5rem;
-  }
-
-  @include mixins.respond-to("large") {
-    margin-top: 6.5rem;
-  }
-}
-
-.popularesNoMomento {
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 15px;
-  margin-bottom: 1rem;
-  margin-left: 0.5rem;
-
-  @include mixins.respond-to("medium") {
+  .popularesNoMomento {
+    margin: 1rem;
     font-size: 24px;
-    margin-left: 0.9rem;
-  }
+    font-weight: bold;
 
-  @include mixins.respond-to("large") {
-    font-size: 29px;
-    margin-left: 1rem;
-  }
-}
+    @include mixins.respond-to("medium") {
+      font-size: 29px;
+    }
 
-.listaPopularMovies {
-  gap: 0.5rem;
+    @include mixins.respond-to("large") {
+      font-size: 33px;
+    }
 
-  @include mixins.flex_center;
-  justify-content: flex-end;
-  flex-flow: row nowrap;
-  @include mixins.respond-to("medium") {
-    gap: 0.8rem;
-  }
-
-  @include mixins.respond-to("large") {
-    gap: 1rem;
-  }
-}
-
-.popularMoviesImages {
-  border-radius: 2px;
-  width: 103px;
-  height: 161px;
-
-  @include mixins.respond-to("medium") {
-    width: 115px;
-    height: 175px;
-  }
-
-  @include mixins.respond-to("large") {
-    width: 150px;
-    height: 200px;
-    transition: ease 0.2s;
-    cursor: pointer;
-
-    &:hover {
-      transform: scale(1.1);
+    @include mixins.respond-to("xlarge") {
+      font-size: 35px;
     }
   }
-}
+
+  .movies-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    }
+
+    .listaPopularMovies {
+      display: flex;
+      transition: transform 0.3s ease;
+
+      .itensPopularMovies {
+        flex: 0 0 auto;
+        max-width: 200px;
+        gap: 0.1rem;
+        margin: 0.5rem;
+
+        @include mixins.respond-to("medium") {
+          margin-left: 0.8rem;
+          gap: 0.9rem;
+        }
+
+        .popularMoviesImages {
+          width: 150px;
+          height: auto;
+          border-radius: 4px;
+          transition: transform 0.3s;
+         
+          @include mixins.respond-to("medium"){
+            width: 175px;
+          }
+
+          @include mixins.respond-to("large") {
+            width: 190px;
+            &:hover {
+              transform: scale(0.9);
+            }
+          }
+
+          @include mixins.respond-to("xlarge") {
+            width: 200px;
+            &:hover {
+              transform: scale(0.9);
+            }
+          }
+        }
+      }
+    }
+  }
+

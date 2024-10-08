@@ -1,0 +1,95 @@
+@use "../../../styles/variables/variables.scss" as *;
+@use "../../../styles/mixins/mixins.scss" as mixins;
+
+.burger-menu {
+  position: relative;
+  margin-left: -2rem;
+  @include mixins.respond-to("medium") {
+    margin-right: -12rem;
+    margin-top: 2rem;
+  padding: 05rem;
+  }
+
+
+  .menu-icon {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+
+    .line {
+      height: 3px;
+      width: 100%;
+      background-color: #fff;
+      transition: all 0.3s ease;
+
+      @include mixins.respond-to("medium") {
+        height: 4px;
+      }
+    }
+
+    &.open {
+      .line:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+      .line:nth-child(2) {
+        opacity: 0;
+      }
+      .line:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+      }
+    }
+  }
+
+  .menu {
+  
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: -90px;
+    background-color: rgba(0, 0, 0, 0.5);
+    @include mixins.respond-to("medium") {
+      margin-left: -2.2rem;
+    }
+
+    &.visible {
+      display: block;
+    }
+
+    ul {
+     
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      flex-direction: column;
+
+      li {
+        padding: 10px 20px;
+
+        a {
+          text-decoration: none;
+          color: #fff;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  // Lista PC
+  .lista-container {
+    display: none;
+
+    @include mixins.respond-to("large") {
+      display: block;
+    }
+  }
+
+  // Responsividade
+  @include mixins.respond-to("large") {
+    .menu-icon {
+      display: none;
+    }
+  }
+}

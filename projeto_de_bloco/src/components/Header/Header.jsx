@@ -2,8 +2,9 @@ import React from 'react'
 
 import logoMobile from '../../assets/logo/MovieFlix_Mobile.png'
 import logoDesktop from '../../assets/logo/MovieFlix.png'
-import './Header styles/_Header.scss'
+import MenuBurguer from './MenuBurguer/MenuBurguer'
 
+import './Header styles/_Header.scss'
 
 function Header() {
   return (
@@ -22,6 +23,7 @@ function Header() {
             Minha Lista
           </li>
         </ul>
+        <MenuBurguer />
       </div>
     </div>
 
