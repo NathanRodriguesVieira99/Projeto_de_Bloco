@@ -29,7 +29,7 @@
     display: flex;
     align-items: center;
     position: relative;
-    }
+    max-width: 100%;
 
     .listaPopularMovies {
       display: flex;
@@ -38,12 +38,10 @@
       .itensPopularMovies {
         flex: 0 0 auto;
         max-width: 200px;
-        gap: 0.1rem;
         margin: 0.5rem;
 
         @include mixins.respond-to("medium") {
           margin-left: 0.8rem;
-          gap: 0.9rem;
         }
 
         .popularMoviesImages {
@@ -51,8 +49,8 @@
           height: auto;
           border-radius: 4px;
           transition: transform 0.3s;
-         
-          @include mixins.respond-to("medium"){
+
+          @include mixins.respond-to("medium") {
             width: 175px;
           }
 
@@ -73,4 +71,40 @@
       }
     }
   }
+
+  .carousel-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin: 0 10px;
+    border-radius: 5px;
+    font-size: 24px;
+    z-index: 1;
+    transition: background-color 0.3s;
+    @include mixins.respond-to("large") {
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+    }
+
+    @include mixins.respond-to("xlarge") {
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+    }
+
+    &.prev {
+      position: absolute;
+      left: 10px;
+    }
+
+    &.next {
+      position: absolute;
+      right: 10px;
+    }
+  }
+}
+
 

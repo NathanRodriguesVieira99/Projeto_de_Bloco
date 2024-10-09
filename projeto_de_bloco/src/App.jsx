@@ -1,7 +1,6 @@
 import React from 'react'
 
 
-
 import Header from './components/Header/Header'
 import PopularMovies from './components/PopularMovies/PopularMovies'
 
@@ -14,7 +13,7 @@ function App() {
 
   return (
     <>
-    
+
       <Header />
       <PopularMovies />
       <Footer />
