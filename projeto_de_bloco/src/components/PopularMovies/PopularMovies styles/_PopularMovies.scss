@@ -29,32 +29,36 @@
     display: flex;
     align-items: center;
     position: relative;
+    min-width: 70%;
     max-width: 100%;
 
     .listaPopularMovies {
-      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
       transition: transform 0.3s ease;
 
       .itensPopularMovies {
-        flex: 0 0 auto;
+        // flex: 0 0 auto;
         max-width: 200px;
-        margin: 0.5rem;
+        margin: 0.4rem;
 
         @include mixins.respond-to("medium") {
           margin-left: 0.8rem;
         }
 
         .popularMoviesImages {
-          width: 150px;
+          width: 153.3px;
           height: auto;
           border-radius: 4px;
           transition: transform 0.3s;
 
           @include mixins.respond-to("medium") {
-            width: 175px;
+            width: 176px;
           }
 
           @include mixins.respond-to("large") {
+            cursor: pointer;
             width: 190px;
             &:hover {
               transform: scale(0.9);
@@ -62,7 +66,8 @@
           }
 
           @include mixins.respond-to("xlarge") {
-            width: 200px;
+            cursor: pointer;
+            width: 210px;
             &:hover {
               transform: scale(0.9);
             }
@@ -106,5 +111,3 @@
     }
   }
 }
-
-
