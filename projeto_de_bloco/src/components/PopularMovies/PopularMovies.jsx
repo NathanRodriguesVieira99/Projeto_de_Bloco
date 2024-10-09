@@ -5,15 +5,16 @@ import './PopularMovies styles/_PopularMovies.scss';
 function PopularMovies() {
   const [movies, setMovies] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const moviesToShow = 5;
+  const moviesToShow = 10;
 
   //gambiarra
   const dimensions = {
-    xsmall: { itemWidth: 151, spacing: 2 }, 
-    small: { itemWidth: 152.3, spacing: 1 }, 
-    large: { itemWidth: 154.5, spacing: 8 }, 
-    xlarge: { itemWidth: 201, spacing: 10 }, 
-    xxlarge: { itemWidth: 136.5, spacing: 12 }, 
+    xsmall: { itemWidth: 119, spacing: 4.1 },
+    small: { itemWidth: 153.3, spacing: 2 },
+    medium: { itemWidth: 148, spacing: 4 },
+    large: { itemWidth: 104.2, spacing: 8 },
+    xlarge: { itemWidth: 200, spacing: 10 },
+    xxlarge: { itemWidth: 28, spacing: 1 },
   };
 
   const getDimensions = () => {
@@ -28,7 +29,7 @@ function PopularMovies() {
     } else if (window.innerWidth >= 480) {
       return dimensions.small;
     } else {
-      return dimensions.xsmall; 
+      return dimensions.xsmall;
     }
   };
   //gambiarra
@@ -46,17 +47,20 @@ function PopularMovies() {
     fetchPopular();
   }, []);
 
+  
   const nextMovie = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex < movies.length - 1 ? prevIndex + 1 : 0
+      prevIndex < movies.length - moviesToShow ? prevIndex + 1 : 0
     );
   };
 
+ 
   const prevMovie = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex > 0 ? prevIndex - 1 : movies.length - 1
+      prevIndex > 0 ? prevIndex - 1 : movies.length - moviesToShow
     );
   };
+
 
   const { itemWidth, spacing } = getDimensions();
 
@@ -72,10 +76,10 @@ function PopularMovies() {
               transform: `translateX(-${currentIndex * (itemWidth + spacing)}px)`,
               transition: 'transform 0.3s ease',
               display: 'flex',
-              width: `${(movies.length * (itemWidth + spacing))}px`,
+              width: `${(moviesToShow * (itemWidth + spacing))}px`, 
             }}
           >
-            {movies.map((movie) => (
+            {movies.slice(currentIndex, currentIndex + moviesToShow).map((movie) => (
               <li key={movie.id} className='itensPopularMovies'>
                 <img
                   className='popularMoviesImages'
