@@ -2,14 +2,14 @@
 @use "../../../styles/mixins/mixins.scss" as mixins;
 
 .odinPopularMovies {
-  margin-top: 4.5rem;
+  margin-top: -1rem;
   position: relative;
   width: 100%;
   overflow: hidden;
 
   .popularesNoMomento {
     margin: 1rem;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: bold;
 
     @include mixins.respond-to("medium") {
