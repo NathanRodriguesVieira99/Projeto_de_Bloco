@@ -3,9 +3,8 @@ import ImagemGrande from '../../components/ImagemGrande/ImagemGrande';
 import PopularMovies from '../../components/PopularMovies/PopularMovies';
 import Footer from '../../components/Footer/Footer';
 
-function Home() {
-
-  return (
+function Home() { 
+  return ( 
     <>
       <Header />
       <ImagemGrande />

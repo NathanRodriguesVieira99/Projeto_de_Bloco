@@ -33,14 +33,14 @@ function ImagemGrande() {
           setCurrentMovieIndex((prevIndex) => {
             return prevIndex === movies.length - 1 ? 0 : prevIndex + 1
           })
-          setIsImageLoaded(false)
+          setIsImageLoaded(true)
         }
       }, 3000)
 
       return () => clearInterval(interval)
     }
 
-  }, [movies])
+  }, [movies, isImageLoaded])
 
 
   const currentMovie = movies.length > 0 && currentMovieIndex < movies.length ?

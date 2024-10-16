@@ -1,4 +1,4 @@
-import React from 'react'
+
 
 import logoMobile from '../../assets/logo/MovieFlix_Mobile.png'
 import logoDesktop from '../../assets/logo/MovieFlix.png'
@@ -22,14 +22,16 @@ function Header() {
     <div className='Odin'>
       <div className="scroll-section" id="scrollSection"></div>
       <div className="paiDaLista">
+
         <img className='LogoImg' src={logoMobile} alt="Logo MovieFlix" />
         <img className='LogoImgDesktop' src={logoDesktop} alt="Logo MovieFlix" />
+
         <ul>
           <li>
             Séries
           </li>
           <li>
-            Filmes
+           Filmes
           </li>
           <li>
             Minha Lista

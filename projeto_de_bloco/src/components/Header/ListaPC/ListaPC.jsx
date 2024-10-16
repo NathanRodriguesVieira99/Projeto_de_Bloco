@@ -1,16 +1,17 @@
-import React from 'react';
-import './_ListaPC.scss';
+// import { Link } from 'react-router-dom'
 
-const ListaPC = ({ closeMenu }) => {
-  return (
-    <ul className="listaPC">
-      <li><a href="" onClick={closeMenu}></a></li>
-      <li><a href="" onClick={closeMenu}></a></li>
-      <li><a href="" onClick={closeMenu}></a></li>
-      <li><a href="" onClick={closeMenu}></a></li>
-      <li><a href="" onClick={closeMenu}></a></li>
-    </ul>
-  );
-};
+// import './_ListaPC.scss';
 
-export default ListaPC;
+// const ListaPC = ({ closeMenu }) => {
+//   return (
+//     <ul className="listaPC">
+//       <li><Link to={ }></Link></li>
+//       <li><Link to={ }></Link></li >
+//       <li><Link to={ }></Link></li >
+//       <li><Link to={ }></Link></li >
+//       <li><Link to={ }></Link></li >
+//     </ul >
+//   );
+// };
+
+// export default ListaPC;
