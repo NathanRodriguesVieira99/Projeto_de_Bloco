@@ -48,7 +48,7 @@ function PopularMovies() {
     fetchPopular();
   }, []);
 
-// se tiver dificuldade em aplicar no seu código me chama, ass: nathan
+  // se tiver dificuldade em aplicar no seu código me chama, ass: nathan
   const nextMovie = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex < movies.length - moviesToShow ? prevIndex + 1 : 0
@@ -64,7 +64,7 @@ function PopularMovies() {
 
 
   const { itemWidth, spacing } = getDimensions();
-// 
+  // 
 
   return (
     <div className='odinPopularMovies'>

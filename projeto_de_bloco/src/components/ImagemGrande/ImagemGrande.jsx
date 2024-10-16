@@ -53,7 +53,7 @@ function ImagemGrande() {
   }
 
   return (
-    <div className='OdinGrande'>
+    <div className='OdinGrande' id='OdinGrande'>
       {currentMovie ? (
         <>
           <img
@@ -69,7 +69,7 @@ function ImagemGrande() {
                 <FaPlus /> Lista
               </button>
               <button className='play'>
-                <FaPlay className='iconePlay' /> play
+                <FaPlay className='iconePlay' /> Play
               </button>
               <button className="moreInfo">
                 <IoMdInformationCircleOutline /> Info

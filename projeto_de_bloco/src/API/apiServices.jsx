@@ -29,7 +29,7 @@ const fetchPopularMovies = async () => {
 
 // isabella vai fazer parecido com o fetchPopularMovies 
 // porem mudando o que for necessario 
-//ex: fetchTvShows (series) ai muda na função
+// ex: fetchTvShows (series) ai muda na função
 
 
 

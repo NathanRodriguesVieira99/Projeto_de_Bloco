@@ -19,11 +19,13 @@ window.addEventListener('scroll', function () {
 
 function Header() {
   return (
-    <div className='Odin'>
+    <div className='Odin' id='Odin'>
       <div className="scroll-section" id="scrollSection"></div>
-      <div className="paiDaLista">
+      <div className="paiDaLista" id='paiDaLista'>
+        <a href="#OdinGrande">
+          <img className='LogoImg' src={logoMobile} alt="Logo MovieFlix" />
+        </a>
 
-        <img className='LogoImg' src={logoMobile} alt="Logo MovieFlix" />
         <img className='LogoImgDesktop' src={logoDesktop} alt="Logo MovieFlix" />
 
         <ul>
@@ -31,7 +33,7 @@ function Header() {
             Séries
           </li>
           <li>
-           Filmes
+            Filmes
           </li>
           <li>
             Minha Lista
