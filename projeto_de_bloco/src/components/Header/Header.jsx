@@ -20,7 +20,7 @@ window.addEventListener('scroll', function () {
 function Header() {
   return (
     <div className='Odin'>
-      <div class="scroll-section" id="scrollSection"></div>
+      <div className="scroll-section" id="scrollSection"></div>
       <div className="paiDaLista">
         <img className='LogoImg' src={logoMobile} alt="Logo MovieFlix" />
         <img className='LogoImgDesktop' src={logoDesktop} alt="Logo MovieFlix" />
