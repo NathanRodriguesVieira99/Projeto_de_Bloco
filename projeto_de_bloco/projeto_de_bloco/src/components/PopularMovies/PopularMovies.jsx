@@ -7,7 +7,7 @@ function PopularMovies() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const moviesToShow = 10;
 
-  //gambiarra
+  //gambiarra // se tiver dificuldade em aplicar no seu código me chama, ass: nathan
   const dimensions = {
     xsmall: { itemWidth: 119, spacing: 4.1 },
     small: { itemWidth: 153.3, spacing: 2 },
@@ -32,7 +32,8 @@ function PopularMovies() {
       return dimensions.xsmall;
     }
   };
-  //gambiarra
+  //gambiarra //
+
 
   useEffect(() => {
     const fetchPopular = async () => {
@@ -47,7 +48,7 @@ function PopularMovies() {
     fetchPopular();
   }, []);
 
-
+// se tiver dificuldade em aplicar no seu código me chama, ass: nathan
   const nextMovie = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex < movies.length - moviesToShow ? prevIndex + 1 : 0
@@ -63,6 +64,7 @@ function PopularMovies() {
 
 
   const { itemWidth, spacing } = getDimensions();
+// 
 
   return (
     <div className='odinPopularMovies'>
@@ -71,15 +73,15 @@ function PopularMovies() {
         <div className="movies-container">
           <button className="carousel-button prev" onClick={prevMovie}>❮</button>
           <ul
-  className='listaPopularMovies'
-  style={{
-    transform: `translateX(-${currentIndex * (itemWidth + spacing)}px)`,
-    transition: 'transform 0.3s ease',
-    display: 'flex',
-  
-    width: `${moviesToShow * (itemWidth + spacing)}px`,
-  }}
->
+            className='listaPopularMovies'
+            style={{
+              transform: `translateX(-${currentIndex * (itemWidth + spacing)}px)`,
+              transition: 'transform 0.3s ease',
+              display: 'flex',
+
+              width: `${moviesToShow * (itemWidth + spacing)}px`,
+            }}
+          >
             {movies.slice(currentIndex, currentIndex + moviesToShow).map((movie) => (
               <li key={movie.id} className='itensPopularMovies'>
                 <img
@@ -90,8 +92,11 @@ function PopularMovies() {
               </li>
             ))}
           </ul>
+
           <button className="carousel-button next" onClick={nextMovie}>❯</button>
+
         </div>
+
       ) : (
         <p>Carregando filmes...</p>
       )}

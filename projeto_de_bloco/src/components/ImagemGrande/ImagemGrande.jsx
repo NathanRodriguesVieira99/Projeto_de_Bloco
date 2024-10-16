@@ -63,14 +63,13 @@ function ImagemGrande() {
             onLoad={handleImageLoad}
             className='BackdropImage'
           />
-          <div className="overlay"></div>
           <div className="conteudos">
             <div className="btns">
               <button className='list'>
                 <FaPlus /> Lista
               </button>
               <button className='play'>
-                <FaPlay className='iconePlay' style={{ fill: '#000' }} /> play
+                <FaPlay className='iconePlay' /> play
               </button>
               <button className="moreInfo">
                 <IoMdInformationCircleOutline /> Info
