@@ -1,0 +1,71 @@
+.OdinGrande {
+  position: relative;
+  margin-top: 0;
+  height: 100%;
+  width: 100%;
+
+  .BackdropImage {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 83%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .conteudos {
+    margin-top: 6px;
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row nowrap;
+
+    .btns {
+      margin-left: 50%;
+      margin-right: 50%;
+      display: flex;
+      gap: 30px;
+
+      .list,
+      .moreInfo {
+        font-size: 16px;
+      }
+      button {
+        background-color: transparent;
+        border: none;
+      }
+      .play {
+        width: 110px;
+        border-radius: 5px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        background-color: lightgray;
+        color: #000;
+      }
+    }
+
+    //telas maiores
+    .conteudosTelaGrande {
+      display: none;
+    }
+
+    .titulo {
+      margin-top: -10rem;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    //telas maiores
+  }
+}

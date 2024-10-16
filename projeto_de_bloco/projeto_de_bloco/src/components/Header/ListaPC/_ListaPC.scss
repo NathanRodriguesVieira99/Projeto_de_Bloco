@@ -1,0 +1,32 @@
+@use "../../../styles/variables/variables.scss" as *;
+@use "../../../styles/mixins/mixins.scss" as mixins;
+
+.listaPC {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+
+  @include mixins.respond-to("large") {
+    font-size: 40px;
+ 
+   gap: .3rem;
+   flex-wrap: nowrap;
+   flex-direction: row;
+  
+  }
+
+  a {
+    color: #000;
+    font-size: 35px;
+    transition: all ease 0.2s;
+    display: inline-block;
+
+    &:hover {
+      color: red;
+      transform: scale(1.1);
+    }
+  }
+}
+
+
