@@ -10,6 +10,8 @@ import './_ImagemGrande.scss';
 
 function ImagemGrande() {
   const [movies, setMovies] = useState([]);
+  const [currentMovieIndex, setCurrentMovieIndex] = useState(0)
+  const [isImageLoaded, setIsImageLoaded] = useState(false)
 
   useEffect(() => {
     const fetchPopular = async () => {
@@ -24,16 +26,41 @@ function ImagemGrande() {
     fetchPopular();
   }, []);
 
-  const firstMovie = movies.length > 0 ? movies[0] : null;
+  useEffect(() => {
+    if (movies.length > 0) {
+      const interval = setInterval(() => {
+        if (isImageLoaded) {
+          setCurrentMovieIndex((prevIndex) => {
+            return prevIndex === movies.length - 1 ? 0 : prevIndex + 1
+          })
+          setIsImageLoaded(false)
+        }
+      }, 3000)
+
+      return () => clearInterval(interval)
+    }
+
+  }, [movies])
+
+
+  const currentMovie = movies.length > 0 && currentMovieIndex < movies.length ?
+    movies[currentMovieIndex]
+    : null;
+
+
+  const handleImageLoad = () => {
+    setIsImageLoaded(true)
+  }
 
   return (
     <div className='OdinGrande'>
-      {firstMovie ? (
+      {currentMovie ? (
         <>
           <img
-            src={`${BACKDROP_BASE_URL}${firstMovie.backdrop_path}`}
-            alt={firstMovie.title}
-            key={firstMovie.id}
+            src={`${BACKDROP_BASE_URL}${currentMovie.backdrop_path}`}
+            alt={currentMovie.title}
+            key={currentMovie.id}
+            onLoad={handleImageLoad}
             className='BackdropImage'
           />
           <div className="conteudos">
@@ -51,14 +78,14 @@ function ImagemGrande() {
 
             {/* telas maiores */}
             <div className="conteudosTelaGrande">
-              <h1 className='titulo'>{firstMovie.title}</h1>
-              <p className='desc'>{firstMovie.overview}</p>
+              <h1 className='titulo'>{currentMovie.title}</h1>
+              <p className='desc'>{currentMovie.overview}</p>
             </div>
             {/* telas maiores */}
           </div>
         </>
       ) : (
-        <p>Carregando imagem...</p>
+        <h1></h1>
       )}
     </div>
   );

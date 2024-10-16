@@ -1,42 +1,45 @@
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 
-import './_MenuBurguer.scss';
+// import { IoMdNotificationsOutline } from "react-icons/io";
 
-import ListaPC from '../../Header/ListaPC/ListaPC';
 
-function MenuBurguer() {
-  const [isOpen, setIsOpen] = useState(false);
+// import './_MenuBurguer.scss';
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+// import ListaPC from '../../Header/ListaPC/ListaPC';
 
-  const closeMenu = () => {
-    setIsOpen(false)
-  }
+// function MenuBurguer() {
+//   const [isOpen, setIsOpen] = useState(false);
 
-  return (
-    <div className='burger-menu'>
-      <div className={`menu-icon ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
-        <div className="line"> </div>
-        <div className="line"></div>
-        <div className="line"></div>
-      </div>
+//   const toggleMenu = () => {
+//     setIsOpen(!isOpen);
+//   };
 
-      <nav className={`menu ${isOpen ? 'visible' : ''}`}>
-        <ul>
-          <li><a href="#">Perfil</a></li>
-          <li><a href="#">Notificações</a></li>
-          <li><a href="#">Pesquisar</a></li>
-        </ul>
-      </nav>
+//   const closeMenu = () => {
+//     setIsOpen(false)
+//   }
 
-      {isOpen && <div className='overlay' onClick={toggleMenu} />}
-      <div className="lista-container">
-        <ListaPC closeMenu={closeMenu} />
-      </div>
-    </div>
-  );
-}
+//   return (
+//     <div className='burger-menu' >
+//       <div className={`menu-icon ${isOpen ? 'open' : ''}`} onClick={toggleMenu} >
+//         <div className="line"> </div>
+//         <div className="line"></div>
+//         <div className="line"></div>
+//       </div>
 
-export default MenuBurguer;
+//       <nav className={`menu ${isOpen ? 'visible' : ''}`}>
+//         <ul>
+        
+//           <li><a href="#"><IoMdNotificationsOutline /></a></li>
+          
+//         </ul>
+//       </nav>
+
+//       {isOpen && <div className='overlay' onClick={toggleMenu} />}
+//       <div className="lista-container">
+//         <ListaPC closeMenu={closeMenu} />
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default MenuBurguer;

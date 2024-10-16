@@ -71,15 +71,15 @@ function PopularMovies() {
         <div className="movies-container">
           <button className="carousel-button prev" onClick={prevMovie}>❮</button>
           <ul
-  className='listaPopularMovies'
-  style={{
-    transform: `translateX(-${currentIndex * (itemWidth + spacing)}px)`,
-    transition: 'transform 0.3s ease',
-    display: 'flex',
-  
-    width: `${moviesToShow * (itemWidth + spacing)}px`,
-  }}
->
+            className='listaPopularMovies'
+            style={{
+              transform: `translateX(-${currentIndex * (itemWidth + spacing)}px)`,
+              transition: 'transform 0.3s ease',
+              display: 'flex',
+
+              width: `${moviesToShow * (itemWidth + spacing)}px`,
+            }}
+          >
             {movies.slice(currentIndex, currentIndex + moviesToShow).map((movie) => (
               <li key={movie.id} className='itensPopularMovies'>
                 <img
@@ -90,8 +90,11 @@ function PopularMovies() {
               </li>
             ))}
           </ul>
+
           <button className="carousel-button next" onClick={nextMovie}>❯</button>
+
         </div>
+
       ) : (
         <p>Carregando filmes...</p>
       )}
