@@ -5,6 +5,8 @@ import { FaPlus } from "react-icons/fa6";
 import { IoMdInformationCircleOutline } from "react-icons/io";
 
 import fetchPopularMovies, { BACKDROP_BASE_URL } from '../../API/apiServices';
+import TitleImagemGrande from '../TitleImagemGrande/TitleImagemGrande';
+
 import './_ImagemGrande.scss';
 
 
@@ -63,6 +65,7 @@ function ImagemGrande() {
             onLoad={handleImageLoad}
             className='BackdropImage'
           />
+          <TitleImagemGrande currentMovie={currentMovie} />
           <div className="conteudos">
             <div className="btns">
               <button className='list'>
@@ -75,13 +78,6 @@ function ImagemGrande() {
                 <IoMdInformationCircleOutline /> Info
               </button>
             </div>
-
-            {/* telas maiores */}
-            <div className="conteudosTelaGrande">
-              <h1 className='titulo'>{currentMovie.title}</h1>
-              <p className='desc'>{currentMovie.overview}</p>
-            </div>
-            {/* telas maiores */}
           </div>
         </>
       ) : (
