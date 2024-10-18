@@ -21,6 +21,7 @@
   }
   @include mixins.respond-to("medium") {
     margin-left: 1rem;
+
   }
   @include mixins.respond-to("large") {
   }
@@ -29,11 +30,27 @@
     font-size: 18px;
     font-weight: 600;
     text-shadow: #fffa 1px 0 10px;
+    @include mixins.respond-to("medium") {
+      font-size: 28px;
+    }
+    @include mixins.respond-to("large") {
+      font-size: 34px;
+    }
   }
   .desc {
-    margin-top: 0.8rem;
-    width: 45%;
-    font-size: 16px;
-    font-weight: 500;
+    @include mixins.respond-to("medium") {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 2rem;
+      margin-top: 0.8rem;
+      height: 100%;
+      width: 65%;
+    }
+    @include mixins.respond-to("large") {
+      font-size: 20px;
+    }
   }
 }
+
+
+

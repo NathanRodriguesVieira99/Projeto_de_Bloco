@@ -64,7 +64,7 @@ function ImagemGrande() {
             key={currentMovie.id}
             onLoad={handleImageLoad}
             className='BackdropImage'
-          />
+         />
           <TitleImagemGrande currentMovie={currentMovie} />
           <div className="conteudos">
             <div className="btns">

@@ -13,10 +13,12 @@
 
     @include mixins.respond-to("medium") {
       font-size: 29px;
+      margin-top: 2rem;
     }
 
     @include mixins.respond-to("large") {
       font-size: 33px;
+      margin-top: 5.5rem;
     }
 
     @include mixins.respond-to("xlarge") {
