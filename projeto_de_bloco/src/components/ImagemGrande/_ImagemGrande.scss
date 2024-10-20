@@ -1,0 +1,89 @@
+@use "../../styles/variables/variables.scss" as variables;
+@use "../../styles/mixins/mixins.scss" as mixins;
+
+.OdinGrande {
+  position: relative;
+  margin-top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.BackdropImage {
+  width: 100%;
+  height: 35vh;
+  z-index: -3;
+  @include mixins.respond-to("medium") {
+    max-width: 100%;
+    height: 40vh;
+  }
+  @include mixins.respond-to("large") {
+    max-width: 100%;
+    height: 85vh;
+  }
+}
+
+.conteudos {
+  width: 100%;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row nowrap;
+  @include mixins.respond-to("medium") {
+    gap: 30px;
+    margin-top: 0.6rem;
+    margin-bottom: 0.1rem;
+  }
+  @include mixins.respond-to("large") {
+    margin-top: 2rem;
+  }
+
+  .btns {
+    margin-left: 50%;
+    margin-right: 50%;
+    display: flex;
+    gap: 20px;
+    @include mixins.respond-to("medium") {
+      gap: 30px;
+    }
+    @include mixins.respond-to("large") {
+      margin-top: 1.2rem;
+      gap: 40px;
+    }
+
+    .list,
+    .moreInfo {
+      font-size: 15px;
+      @include mixins.respond-to("medium") {
+        font-size: 18px;
+      }
+      @include mixins.respond-to("large") {
+      }
+    }
+    button {
+      background-color: transparent;
+      border: none;
+      @include mixins.respond-to("medium") {
+        font-size: 18px;
+      }
+      @include mixins.respond-to("large") {
+      }
+    }
+    .play {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+
+      background-color: lightgray;
+      color: #000;
+
+      width: 110px;
+      border-radius: 5px;
+      @include mixins.respond-to("medium") {
+        width: 135px;
+      }
+      @include mixins.respond-to("large") {
+      }
+    }
+  }
+}

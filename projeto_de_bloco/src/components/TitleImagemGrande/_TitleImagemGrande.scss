@@ -1,0 +1,56 @@
+@use "../../styles/variables/variables.scss" as variables;
+@use "../../styles/mixins/mixins.scss" as mixins;
+
+.conteudosTelaGrande {
+  display: none;
+  @include mixins.respond-to("medium") {
+    display: flex;
+    flex-flow: column wrap;
+    z-index: 5;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  @include mixins.respond-to("large") {
+  }
+
+  .paiDosTitlosDosFilmes {
+    display: flex;
+    flex-flow: column wrap;
+    margin-top: -10rem;
+    margin-left: 0.5rem;
+  }
+  @include mixins.respond-to("medium") {
+    margin-left: 1rem;
+
+  }
+  @include mixins.respond-to("large") {
+  }
+  .titulo {
+    margin-top: -10rem;
+    font-size: 18px;
+    font-weight: 600;
+    text-shadow: #fffa 1px 0 10px;
+    @include mixins.respond-to("medium") {
+      font-size: 28px;
+    }
+    @include mixins.respond-to("large") {
+      font-size: 34px;
+    }
+  }
+  .desc {
+    @include mixins.respond-to("medium") {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 2rem;
+      margin-top: 0.8rem;
+      height: 100%;
+      width: 65%;
+    }
+    @include mixins.respond-to("large") {
+      font-size: 20px;
+    }
+  }
+}
+
+
+

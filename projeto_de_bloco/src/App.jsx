@@ -1,24 +1,11 @@
-import React from 'react'
-
-
-
-import Header from './components/Header/Header'
-import PopularMovies from './components/PopularMovies/PopularMovies'
-
+import { Outlet } from "react-router-dom"
 
 import './styles/global/global.scss'
-import Footer from './components/Footer/Footer'
-
 
 function App() {
 
   return (
-    <>
-    
-      <Header />
-      <PopularMovies />
-      <Footer />
-    </>
+    <Outlet /> // exibe todas as rotas filhas (Home e Login)
   )
 }
 
