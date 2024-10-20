@@ -39,6 +39,7 @@
   }
 
   .btns {
+    margin-top: 1rem;
     margin-left: 50%;
     margin-right: 50%;
     display: flex;
@@ -58,6 +59,8 @@
         font-size: 18px;
       }
       @include mixins.respond-to("large") {
+        cursor: pointer;
+       font-size: 20px;
       }
     }
     button {
@@ -73,7 +76,6 @@
       display: flex;
       align-items: center;
       justify-content: space-evenly;
-
       background-color: lightgray;
       color: #000;
 
@@ -83,6 +85,9 @@
         width: 135px;
       }
       @include mixins.respond-to("large") {
+        width: 140px;
+        cursor: pointer;
+        transition: ease-in-out 0.3s;
       }
     }
   }
