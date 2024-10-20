@@ -7,7 +7,7 @@ function PopularMovies() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const moviesToShow = 10;
 
-  //gambiarra // se tiver dificuldade em aplicar no seu código me chama, ass: nathan
+//gambiarra // se tiver dificuldade em aplicar no seu código me chama, ass: nathan
   const dimensions = {
     xsmall: { itemWidth: 119, spacing: 4.1 },
     small: { itemWidth: 153.3, spacing: 2 },
