@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { FcGoogle } from "react-icons/fc";
 import logoMobile from '../../assets/logo/MovieFlix_Mobile.png';
-import Background from '../../components/Background'; 
+import Background from '../../components/Background';
 
 function Login() {
   const navigate = useNavigate();
@@ -11,10 +11,10 @@ function Login() {
   const [senha, setSenha] = useState('');
 
   const handleLogin = (e) => {
-    e.preventDefault(); 
+    e.preventDefault();
     console.log('Usuário:', usuario);
     console.log('Senha:', senha);
-    navigate('home'); 
+    navigate('home');
   };
 
   useEffect(() => {
@@ -153,10 +153,10 @@ const styles = {
   socialContainer: {
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'flex-start',
+    alignItems: 'center',
     gap: 8,
     width: '100%',
-    paddingLeft: 38,
+    marginTop: 25
   },
   googleButton: {
     display: 'flex',
