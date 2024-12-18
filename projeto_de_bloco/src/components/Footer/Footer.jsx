@@ -19,9 +19,9 @@ function Footer() {
   ];
   const linkedinLinks = [
     { text: "Victor Hugo Moraes", url: "https://linkedin.com/in/victor-hugo-moraes-026567213" },
-    { text: "Isabella Mayer", url: "https://linkedin.com/in/isabellamayer" },
-    { text: "Marcos Isaac", url: "https://linkedin.com/in/marcosisaac" },
-    { text: "NathanRodriguesVieira99", url: "https://linkedin.com/in/nathanrodriguesvieira99" }
+    { text: "Isabella Mayer", url: "https://www.linkedin.com/in/isabella-mayer-22b16024a/" },
+    { text: "Marcos Isaac", url: "https://www.linkedin.com/in/marcos-isaac-7b6654197/" },
+    { text: "Nathan Rodrigues Vieira", url: "https://www.linkedin.com/in/nathan-rodrigues-vieira-207747252/" }
   ];
 
   return (
