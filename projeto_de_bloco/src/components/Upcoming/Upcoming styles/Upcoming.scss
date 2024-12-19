@@ -42,26 +42,45 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 
   &:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    width: 190px;
+    &:hover {
+      transform: scale(0.9);
+    }
   }
 }
 
 .movieImages {
-  border-radius: 2px;
-  width: 103px;
-  height: 161px;
+  width: 153.3px;
+  height: auto;
+  border-radius: 4px;
+  transition: transform 0.3s;
 
   @include mixins.respond-to("medium") {
-    width: 125px;
-    height: 195px;
+    width: 176px;
   }
 
   @include mixins.respond-to("large") {
-    width: 150px;
-    height: 220px;
+    cursor: pointer;
+    width: 190px;
+    &:hover {
+      transform: scale(0.9);
+    }
+  }
+
+  @include mixins.respond-to("xlarge") {
+    cursor: pointer;
+    width: 210px;
+    height: auto;
+    &:hover {
+      transform: scale(0.9);
+    }
   }
 }
+
+

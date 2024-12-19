@@ -2,7 +2,7 @@
 @use "../../../styles/mixins/mixins.scss" as mixins;
 
 .odinPopularMovies {
-  margin-top: .6rem;
+  margin-top: 0.6rem;
   width: 100%;
   overflow: hidden;
 
@@ -69,6 +69,7 @@
           @include mixins.respond-to("xlarge") {
             cursor: pointer;
             width: 210px;
+            height: auto;
             &:hover {
               transform: scale(0.9);
             }

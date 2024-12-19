@@ -42,29 +42,44 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 
-  &:hover {
+ &:hover {
+   cursor: pointer;
+   width: 190px;
+   &:hover {
+     transform: scale(0.9);
+   }
+ }
+}
+
+.nowPlayingImages {
+  width: 153.3px;
+  height: auto;
+  border-radius: 4px;
+  transition: transform 0.3s;
+
+  @include mixins.respond-to("medium") {
+    width: 176px;
+  }
+
+  @include mixins.respond-to("large") {
     cursor: pointer;
     width: 190px;
     &:hover {
       transform: scale(0.9);
     }
   }
-}
 
-.nowPlayingImages {
-  border-radius: 2px;
-  width: 103px;
-  height: 161px;
-
-  @include mixins.respond-to("medium") {
-    width: 125px;
-    height: 195px;
-  }
-
-  @include mixins.respond-to("large") {
-    width: 150px;
-    height: 220px;
+  @include mixins.respond-to("xlarge") {
+    cursor: pointer;
+    width: 210px;
+    height: auto;
+    &:hover {
+      transform: scale(0.9);
+    }
   }
 }
+
