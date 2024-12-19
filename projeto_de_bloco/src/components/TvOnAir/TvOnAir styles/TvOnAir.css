@@ -1,0 +1,86 @@
+.odinTvOnAir {
+  margin-top: 4.5rem;
+}
+@media (min-width: 768px) {
+  .odinTvOnAir {
+    margin-top: 6.5rem;
+  }
+}
+@media (min-width: 992px) {
+  .odinTvOnAir {
+    margin-top: 6.5rem;
+  }
+}
+
+.tvOnAirTitle {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  margin-left: 0.5rem;
+}
+@media (min-width: 768px) {
+  .tvOnAirTitle {
+    font-size: 24px;
+    margin-left: 0.9rem;
+  }
+}
+@media (min-width: 992px) {
+  .tvOnAirTitle {
+    font-size: 29px;
+    margin-left: 1rem;
+  }
+}
+
+.tvOnAirList {
+  gap: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-flow: row nowrap;
+}
+
+.tvOnAirItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.tvOnAirItem:hover {
+  cursor: pointer;
+  width: 190px;
+}
+.tvOnAirItem:hover:hover {
+  transform: scale(0.9);
+}
+
+.tvOnAirImage {
+  width: 153.3px;
+  height: auto;
+  border-radius: 4px;
+  transition: transform 0.3s;
+}
+@media (min-width: 768px) {
+  .tvOnAirImage {
+    width: 176px;
+  }
+}
+@media (min-width: 992px) {
+  .tvOnAirImage {
+    cursor: pointer;
+    width: 190px;
+  }
+  .tvOnAirImage:hover {
+    transform: scale(0.9);
+  }
+}
+@media (min-width: 1200px) {
+  .tvOnAirImage {
+    cursor: pointer;
+    width: 210px;
+    height: auto;
+  }
+  .tvOnAirImage:hover {
+    transform: scale(0.9);
+  }
+}/*# sourceMappingURL=TvOnAir.css.map */

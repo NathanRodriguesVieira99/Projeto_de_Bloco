@@ -1,0 +1,86 @@
+.odinNowPlaying {
+  margin-top: 4.5rem;
+}
+@media (min-width: 768px) {
+  .odinNowPlaying {
+    margin-top: 6.5rem;
+  }
+}
+@media (min-width: 992px) {
+  .odinNowPlaying {
+    margin-top: 6.5rem;
+  }
+}
+
+.nowPlayingNoMomento {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  margin-left: 0.5rem;
+}
+@media (min-width: 768px) {
+  .nowPlayingNoMomento {
+    font-size: 24px;
+    margin-left: 0.9rem;
+  }
+}
+@media (min-width: 992px) {
+  .nowPlayingNoMomento {
+    font-size: 29px;
+    margin-left: 1rem;
+  }
+}
+
+.listaNowPlaying {
+  gap: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-flow: row nowrap;
+}
+
+.itensNowPlaying {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.itensNowPlaying:hover {
+  cursor: pointer;
+  width: 190px;
+}
+.itensNowPlaying:hover:hover {
+  transform: scale(0.9);
+}
+
+.nowPlayingImages {
+  width: 153.3px;
+  height: auto;
+  border-radius: 4px;
+  transition: transform 0.3s;
+}
+@media (min-width: 768px) {
+  .nowPlayingImages {
+    width: 176px;
+  }
+}
+@media (min-width: 992px) {
+  .nowPlayingImages {
+    cursor: pointer;
+    width: 190px;
+  }
+  .nowPlayingImages:hover {
+    transform: scale(0.9);
+  }
+}
+@media (min-width: 1200px) {
+  .nowPlayingImages {
+    cursor: pointer;
+    width: 210px;
+    height: auto;
+  }
+  .nowPlayingImages:hover {
+    transform: scale(0.9);
+  }
+}/*# sourceMappingURL=NowPlaying.css.map */
