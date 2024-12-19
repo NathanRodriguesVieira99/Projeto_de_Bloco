@@ -1,12 +1,14 @@
-import { Outlet } from "react-router-dom"
-
-import './styles/global/global.scss'
+import React from 'react';
+import './styles/global/global.scss';
+import { Outlet } from 'react-router-dom';
 
 function App() {
 
   return (
-    <Outlet /> // exibe todas as rotas filhas (Home e Login)
-  )
+    <>
+      <Outlet />
+    </>
+  );
 }
 
-export default App
+export default App;
