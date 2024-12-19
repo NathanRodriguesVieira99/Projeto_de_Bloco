@@ -1,0 +1,67 @@
+@use "../../../styles/variables/variables.scss" as variables;
+@use "../../../styles/mixins/mixins.scss" as mixins;
+
+.odinNowPlaying {
+  margin-top: 4.5rem;
+
+  @include mixins.respond-to("medium") {
+    margin-top: 6.5rem;
+  }
+
+  @include mixins.respond-to("large") {
+    margin-top: 6.5rem;
+  }
+}
+
+.nowPlayingNoMomento {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  margin-left: 0.5rem;
+
+  @include mixins.respond-to("medium") {
+    font-size: 24px;
+    margin-left: 0.9rem;
+  }
+
+  @include mixins.respond-to("large") {
+    font-size: 29px;
+    margin-left: 1rem;
+  }
+}
+
+.listaNowPlaying {
+  gap: 0.5rem;
+  @include mixins.flex_center;
+  justify-content: flex-end;
+  flex-flow: row nowrap;
+}
+
+.itensNowPlaying {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.nowPlayingImages {
+  border-radius: 2px;
+  width: 103px;
+  height: 161px;
+
+  @include mixins.respond-to("medium") {
+    width: 125px;
+    height: 195px;
+  }
+
+  @include mixins.respond-to("large") {
+    width: 150px;
+    height: 220px;
+  }
+}
